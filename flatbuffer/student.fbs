@@ -1,0 +1,16 @@
+namespace school;
+
+table Address {
+  city: string;
+  street: string;
+}
+
+table Student {
+  id: int32;
+  name: string;
+  age: int32;
+  address: Address;
+  courses: [string];
+}
+
+root_type Student;
