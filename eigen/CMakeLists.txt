@@ -12,7 +12,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(eigen)
 
-# 基础学习文件
 add_executable(hello src/hello.cpp)
 target_link_libraries(hello Eigen3::Eigen)
 
@@ -22,11 +21,21 @@ target_link_libraries(hello_changd Eigen3::Eigen)
 add_executable(matrix_ops src/matrix_ops.cpp)
 target_link_libraries(matrix_ops Eigen3::Eigen)
 
-add_executable(matrix_access src/matrix_access.cpp)
-target_link_libraries(matrix_access Eigen3::Eigen)
+# ========== 应用场景模板 ==========
+add_executable(robot_slam examples/robot_slam_transform.cpp)
+target_link_libraries(robot_slam Eigen3::Eigen)
 
-add_executable(linear_solve src/linear_solve.cpp)
-target_link_libraries(linear_solve Eigen3::Eigen)
+add_executable(graphics_3d examples/graphics_3d_camera.cpp)
+target_link_libraries(graphics_3d Eigen3::Eigen)
 
-add_executable(matrix_inverse src/matrix_inverse.cpp)
-target_link_libraries(matrix_inverse Eigen3::Eigen)
+add_executable(machine_learning examples/machine_learning_pca.cpp)
+target_link_libraries(machine_learning Eigen3::Eigen)
+
+add_executable(physics_sim examples/physics_simulation.cpp)
+target_link_libraries(physics_sim Eigen3::Eigen)
+
+add_executable(vision_cv examples/vision_camera_calibration.cpp)
+target_link_libraries(vision_cv Eigen3::Eigen)
+
+add_executable(signal_proc examples/signal_processing.cpp)
+target_link_libraries(signal_proc Eigen3::Eigen)
